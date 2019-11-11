@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Project;
 use App\Task;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Http\RedirectResponse;
 
 class ProjectTasksController extends Controller
 {
@@ -11,8 +13,8 @@ class ProjectTasksController extends Controller
      * Add a task to the given project.
      *
      * @param Project $project
-     * @return \Illuminate\Http\RedirectResponse
-     * @throws \Illuminate\Auth\Access\AuthorizationException
+     * @return RedirectResponse
+     * @throws AuthorizationException
      */
     public function store(Project $project)
     {
@@ -28,10 +30,10 @@ class ProjectTasksController extends Controller
     /**
      * Update the project.
      *
-     * @param  Project $project
-     * @param  Task    $task
-     * @return \Illuminate\Http\RedirectResponse
-     * @throws \Illuminate\Auth\Access\AuthorizationException
+     * @param Project $project
+     * @param Task $task
+     * @return RedirectResponse
+     * @throws AuthorizationException
      */
     public function update(Project $project, Task $task)
     {

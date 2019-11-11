@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+
 trait RecordsActivity
 {
     /**
@@ -32,7 +34,7 @@ trait RecordsActivity
     /**
      * Get the description of the activity.
      *
-     * @param  string $description
+     * @param string $description
      * @return string
      */
     protected function activityDescription($description)
@@ -72,7 +74,7 @@ trait RecordsActivity
     /**
      * The activity feed for the project.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     * @return MorphMany
      */
     public function activity()
     {

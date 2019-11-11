@@ -13,8 +13,8 @@ class ProjectPolicy
     /**
      * Determine if the user may update the project.
      *
-     * @param  User    $user
-     * @param  Project $project
+     * @param User $user
+     * @param Project $project
      * @return bool
      */
     public function update(User $user, Project $project)

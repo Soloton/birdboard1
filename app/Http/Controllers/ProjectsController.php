@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Response;
 
 class ProjectsController extends Controller
 {
     /**
      * View all projects.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -23,8 +26,8 @@ class ProjectsController extends Controller
      *
      * @param Project $project
      *
-     * @return \Illuminate\Http\Response
-     * @throws \Illuminate\Auth\Access\AuthorizationException
+     * @return Response
+     * @throws AuthorizationException
      */
     public function show(Project $project)
     {
@@ -36,7 +39,7 @@ class ProjectsController extends Controller
     /**
      * Create a new project.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -46,7 +49,7 @@ class ProjectsController extends Controller
     /**
      * Persist a new project.
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse
      */
     public function store()
     {
@@ -58,20 +61,20 @@ class ProjectsController extends Controller
     /**
      * Edit the project.
      *
-     * @param  Project $project
-     * @return \Illuminate\Http\Response
+     * @param Project $project
+     * @return Response
      */
     public function edit(Project $project)
     {
         return view('projects.edit', compact('project'));
     }
-    
+
     /**
      * Update the project.
      *
-     * @param  Project $project
-     * @return \Illuminate\Http\RedirectResponse
-     * @throws \Illuminate\Auth\Access\AuthorizationException
+     * @param Project $project
+     * @return RedirectResponse
+     * @throws AuthorizationException
      */
     public function update(Project $project)
     {
