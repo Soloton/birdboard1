@@ -4,9 +4,9 @@ namespace Tests\Feature;
 
 use App\Project;
 use Facades\Tests\Setup\ProjectFactory;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 
 class ManageProjectsTest extends TestCase
 {

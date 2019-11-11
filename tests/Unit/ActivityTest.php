@@ -2,9 +2,6 @@
 
 namespace Tests\Unit;
 
-use App\Activity;
-use App\Project;
-use App\User;
 use Facades\Tests\Setup\ProjectFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
