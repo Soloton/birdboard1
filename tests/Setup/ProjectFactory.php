@@ -25,7 +25,7 @@ class ProjectFactory
     /**
      * Set the number of tasks to create for the project.
      *
-     * @param  int $count
+     * @param int $count
      * @return $this
      */
     public function withTasks($count)
@@ -38,7 +38,7 @@ class ProjectFactory
     /**
      * Set the owner of the new project.
      *
-     * @param  User $user
+     * @param User $user
      * @return $this
      */
     public function ownedBy($user)

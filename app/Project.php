@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Project extends Model
 {
@@ -28,7 +30,7 @@ class Project extends Model
     /**
      * The owner of the project.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return BelongsTo
      */
     public function owner()
     {
@@ -38,7 +40,7 @@ class Project extends Model
     /**
      * The tasks associated with the project.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return HasMany
      */
     public function tasks()
     {
@@ -48,8 +50,8 @@ class Project extends Model
     /**
      * Add a task to the project.
      *
-     * @param  string $body
-     * @return \Illuminate\Database\Eloquent\Model
+     * @param string $body
+     * @return Model
      */
     public function addTask($body)
     {

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Task extends Model
 {
@@ -33,7 +34,7 @@ class Task extends Model
 
     /**
      * Model events that should trigger new activity.
-     * 
+     *
      * @var array
      */
     protected static $recordableEvents = ['created', 'deleted'];
@@ -61,7 +62,7 @@ class Task extends Model
     /**
      * Get the owning project.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return BelongsTo
      */
     public function project()
     {
