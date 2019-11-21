@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Validation\Rule;
 
-class ProjectInvitationTest extends FormRequest
+class ProjectInvitationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -15,8 +15,7 @@ class ProjectInvitationTest extends FormRequest
      */
     public function authorize()
     {
-        return
-        Gate::allows('update', $this->route('project'));
+        return Gate::allows('update', $this->route('project'));
     }
 
     /**
@@ -31,6 +30,11 @@ class ProjectInvitationTest extends FormRequest
         ];
     }
 
+    /**
+     * Get custom messages for validator errors.
+     *
+     * @return array
+     */
     public function messages()
     {
         return [
