@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Project;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Response;
+use Illuminate\View\View;
 
 class ProjectsController extends Controller
 {
     /**
      * View all projects.
      *
-     * @return Response
+     * @return Factory|View
      */
     public function index()
     {
@@ -26,7 +27,7 @@ class ProjectsController extends Controller
      *
      * @param Project $project
      *
-     * @return Response
+     * @return Factory|View
      * @throws AuthorizationException
      */
     public function show(Project $project)
@@ -39,7 +40,7 @@ class ProjectsController extends Controller
     /**
      * Create a new project.
      *
-     * @return Response
+     * @return Factory|View
      */
     public function create()
     {
@@ -49,11 +50,15 @@ class ProjectsController extends Controller
     /**
      * Persist a new project.
      *
-     * @return RedirectResponse
+     * @return mixed
      */
     public function store()
     {
         $project = auth()->user()->projects()->create($this->validateRequest());
+
+        if (request()->wantsJson()) {
+            return ['message' => $project->path()];
+        }
 
         return redirect($project->path());
     }
@@ -62,7 +67,7 @@ class ProjectsController extends Controller
      * Edit the project.
      *
      * @param Project $project
-     * @return Response
+     * @return Factory|View
      */
     public function edit(Project $project)
     {
