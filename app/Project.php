@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -51,12 +52,12 @@ class Project extends Model
     /**
      * Add a task to the project.
      *
-     * @param string $body
-     * @return Model
+     * @param $tasks
+     * @return Collection
      */
-    public function addTask($body)
+    public function addTasks($tasks)
     {
-        return $this->tasks()->create(compact('body'));
+        return $this->tasks()->createMany($tasks);
     }
 
     /**
