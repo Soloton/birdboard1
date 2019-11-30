@@ -555,24 +555,42 @@ table {
 }
 
 .theme-dark .button {
-  box-shadow: 0 2px 7px 0 #00658b;
+    box-shadow: 0 2px 7px 0 #00658b;
 }
 
 .card {
-  background-color: var(--card-background-color);
-  padding: 1.25rem;
-  border-radius: .5rem;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .08);
+    background-color: var(--card-background-color);
+    padding: 1.25rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .08);
+}
+
+.dropdown-toggle > button:focus {
+    outline: 0;
+}
+
+.dropdown-menu-link {
+    display: block;
+    color: var(--text-default-color);
+    text-decoration: none;
+    font-size: .875rem;
+    line-height: 2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.dropdown-menu-link:hover {
+    background: rgba(0, 0, 0, .2);
 }
 
 body,
 button {
-  color: var(--text-default-color);
+    color: var(--text-default-color);
 }
 
 .section {
-  padding-left: 2rem;
-  padding-right: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .list-reset {
