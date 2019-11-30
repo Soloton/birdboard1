@@ -2037,22 +2037,22 @@ module.exports = {
                     },
                     submit: function submit() {
                         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function submit$(_context) {
-        while (1) {
-            switch (_context.prev = _context.next) {
-                case 0:
-                    if (!this.form.tasks[0].body) {
-                        delete this.form.originalData.tasks;
-                    }
+                            while (1) {
+                                switch (_context.prev = _context.next) {
+                                    case 0:
+                                        if (!this.form.tasks[0].body) {
+                                            delete this.form.originalData.tasks;
+                                        }
 
-                    this.form.submit('/projects').then(function (response) {
-                        return location = response.data.message;
-                    });
+                                        this.form.submit('/projects').then(function (response) {
+                                            return location = response.data.message;
+                                        });
 
-                case 2:
-                case "end":
-                    return _context.stop();
-            }
-        }
+                                    case 2:
+                                    case "end":
+                                        return _context.stop();
+                                }
+                            }
                         }, null, this);
                     }
                 }
@@ -3300,15 +3300,17 @@ __webpack_require__(/*! setimmediate */ "./node_modules/setimmediate/setImmediat
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
 exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
-                       (typeof global !== "undefined" && global.setImmediate) ||
-                       (this && this.setImmediate);
-exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
-                         (typeof global !== "undefined" && global.clearImmediate) ||
-                         (this && this.clearImmediate);
+    (typeof global !== "undefined" && global.setImmediate) ||
+    (this && this.setImmediate);
+                exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
+                    (typeof global !== "undefined" && global.clearImmediate) ||
+                    (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+                /* WEBPACK VAR INJECTION */
+            }.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
-/***/ }),
+            /***/
+        }),
 
         /***/
         "./node_modules/vue-js-modal/dist/index.js":
@@ -4221,16 +4223,16 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                             height: "auto"
                         }
                     },
-    [
-      _c("h1", { staticClass: "font-normal mb-16 text-center text-2xl" }, [
-          _vm._v("Let’s Start Something New")
-      ]),
-      _vm._v(" "),
-      _c(
-        "form",
-        {
-          on: {
-            submit: function($event) {
+                    [
+                        _c("h1", {staticClass: "font-normal mb-16 text-center text-2xl"}, [
+                            _vm._v("Let’s Start Something New")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                            "form",
+                            {
+                                on: {
+                                    submit: function ($event) {
               $event.preventDefault()
               return _vm.submit($event)
             }
@@ -4429,13 +4431,13 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
             _c(
               "button",
               {
-                staticClass: "button is-outlined mr-4",
-                attrs: { type: "button" },
-                on: {
-                  click: function($event) {
-                    return _vm.$modal.hide("new-project")
+                  staticClass: "button is-outlined mr-4",
+                  attrs: {type: "button"},
+                  on: {
+                      click: function ($event) {
+                          return _vm.$modal.hide("new-project")
+                      }
                   }
-                }
               },
                 [_vm._v("Cancel\n            ")]
             ),
@@ -4443,8 +4445,8 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
               _c("button", {staticClass: "button"}, [_vm._v("Create Project")])
           ])
         ]
-      )
-    ]
+                        )
+                    ]
                 )
             }
             var staticRenderFns = []
@@ -4485,16 +4487,16 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                                 "rounded-full w-4 h-4 bg-default border mr-2 focus:outline-none",
                             class: {"border-accent": _vm.selectedTheme == theme},
                             style: {backgroundColor: color},
-        on: {
-          click: function($event) {
-            _vm.selectedTheme = theme
-          }
-        }
-      })
-    }),
-    0
-  )
-}
+                            on: {
+                                click: function ($event) {
+                                    _vm.selectedTheme = theme
+                                }
+                            }
+                        })
+                    }),
+                    0
+                )
+            }
 var staticRenderFns = []
 render._withStripped = true
 
@@ -16593,7 +16595,7 @@ try {
 	g = g || new Function("return this")();
 } catch (e) {
 	// This works if the window reference is available
-	if (typeof window === "object") g = window;
+    if (typeof window === "object") g = window;
 }
 
 // g can still be undefined, but nothing to do about it...
@@ -16617,39 +16619,22 @@ try {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
             /* harmony import */
-            var vue_js_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-js-modal */ "./node_modules/vue-js-modal/dist/index.js");
+            var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
             /* harmony import */
-            var vue_js_modal__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_js_modal__WEBPACK_IMPORTED_MODULE_0__);
-            /**
-             * First we will load all of this project's JavaScript dependencies which
-             * includes Vue and other libraries. It is a great starting point when
-             * building robust, powerful web applications using Vue and Laravel.
-             */
-            __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+            var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+            /* harmony import */
+            var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
+            /* harmony import */
+            var vue_js_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-js-modal */ "./node_modules/vue-js-modal/dist/index.js");
+            /* harmony import */
+            var vue_js_modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_js_modal__WEBPACK_IMPORTED_MODULE_2__);
 
-            window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
-            Vue.use(vue_js_modal__WEBPACK_IMPORTED_MODULE_0___default.a);
-            /**
-             * The following block of code may be used to automatically register your
-             * Vue components. It will recursively scan this directory for the Vue
-             * components and automatically register them with their "basename".
-             *
-             * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
-             */
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
-            Vue.component('theme-switcher', __webpack_require__(/*! ./components/ThemeSwitcher.vue */ "./resources/js/components/ThemeSwitcher.vue")["default"]);
-            Vue.component('new-project-modal', __webpack_require__(/*! ./components/NewProjectModal.vue */ "./resources/js/components/NewProjectModal.vue")["default"]);
-            Vue.component('dropdown', __webpack_require__(/*! ./components/Dropdown.vue */ "./resources/js/components/Dropdown.vue")["default"]);
-            /**
-             * Next, we will create a fresh Vue application instance and attach it to
-             * the page. Then, you may begin adding components to this application
-             * or customize the JavaScript scaffolding to fit your unique needs.
-             */
-
-            var app = new Vue({
+            vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_js_modal__WEBPACK_IMPORTED_MODULE_2___default.a);
+            vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('theme-switcher', __webpack_require__(/*! ./components/ThemeSwitcher.vue */ "./resources/js/components/ThemeSwitcher.vue")["default"]);
+            vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('new-project-modal', __webpack_require__(/*! ./components/NewProjectModal.vue */ "./resources/js/components/NewProjectModal.vue")["default"]);
+            vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('dropdown', __webpack_require__(/*! ./components/Dropdown.vue */ "./resources/js/components/Dropdown.vue")["default"]);
+            new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
                 el: '#app'
             });
 
@@ -16661,24 +16646,20 @@ try {
         /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
   \***********************************/
-        /*! no static exports found */
-        /***/ (function (module, exports, __webpack_require__) {
+        /*! no exports provided */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
-            window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony import */
+            var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+            /* harmony import */
+            var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+            window.axios = axios__WEBPACK_IMPORTED_MODULE_0___default.a;
             window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-            /**
-             * Echo exposes an expressive API for subscribing to channels and listening
-             * for events that are broadcast by Laravel. Echo and event broadcasting
-             * allows your team to easily build robust real-time web applications.
-             */
-// import Echo from 'laravel-echo';
-// window.Pusher = require('pusher-js');
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
-// });
+            var token = document.head.querySelector('meta[name="csrf-token"]');
+            window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 
             /***/
         }),
@@ -17054,9 +17035,11 @@ try {
 
 // removed by extract-text-webpack-plugin
 
-/***/ }),
+            /***/
+        }),
 
-/***/ 0:
+        /***/
+        0:
 /*!*************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
   \*************************************************************/

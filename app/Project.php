@@ -52,7 +52,7 @@ class Project extends Model
     /**
      * Add a task to the project.
      *
-     * @param $tasks
+     * @param array $tasks
      * @return Collection
      */
     public function addTasks($tasks)
@@ -61,16 +61,29 @@ class Project extends Model
     }
 
     /**
-     * @param User $user
+     * Add a task to the project.
      *
-     *
+     * @param string $body
+     * @return Model
      */
-    public function invite(User $user)
+    public function addTask($body)
     {
-        return $this->members()->attach($user);
+        return $this->tasks()->create(compact('body'));
     }
 
     /**
+     * Invite a user to the project.
+     *
+     * @param User $user
+     */
+    public function invite(User $user)
+    {
+        $this->members()->attach($user);
+    }
+
+    /**
+     * Get all members that are assigned to the team.
+     *
      * @return BelongsToMany
      */
     public function members()
